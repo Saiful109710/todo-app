@@ -1,7 +1,9 @@
 const getInputFieldValue=()=>{
     const inputField = document.getElementById("inputField");
     const inputFieldValue = inputField.value;
-    displayTodoData(inputFieldValue)
+   
+    displayTodoData(inputFieldValue);
+     
 }
 
 const deleteTodo=(event)=>{
@@ -10,6 +12,7 @@ const deleteTodo=(event)=>{
 }
 
 const displayTodoData=(inputFieldValue)=>{
+
     if(inputFieldValue===""){
         alert("please enter something:");
         return
@@ -22,4 +25,5 @@ const displayTodoData=(inputFieldValue)=>{
                  <button  onclick="deleteTodo(event)" class="btn">Delete</button>
             </div>
     `
+    document.getElementById("inputField").value = ""
 }
